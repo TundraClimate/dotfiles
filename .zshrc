@@ -11,6 +11,7 @@ source $ZSH/oh-my-zsh.sh
 
 PROMPT='%F{green}%n%F{white}@%F{cyan}%~#%F{reset-color} '
 xmodmap -e "keycode 102 = Zenkaku_Hankaku"
+xmodmap -e "keycode 49 = End"
 autoload -Uz colors ; colors
 export EDITOR=vim
 export PATH="/usr/local/bin:$HOME/bin:$PATH"
