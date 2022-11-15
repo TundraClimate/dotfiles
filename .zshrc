@@ -52,6 +52,32 @@ alias h='fc -lt '%F %T' 1'
 setopt inc_append_history
 setopt hist_verify
 
+# Alias ---
+
+#Git Alias
+alias ga='git add'
+alias gaa='git add -A'
+alias gc='git commit'
+alias gpush='git push'
+alias gmerge='git merge --no-ff'
+alias gco='git checkout'
+alias gb='git branch'
+alias gfetch='git fetch'
+alias gpull='git pull'
+alias grebase='git rebase'
+alias gremote='git remote'
+alias greset='git reset'
+alias gref='git reflogs'
+alias glog'git log'
+alias gstash='git stash'
+alias gstatus='git status'
+alias gdiff='git diff'
+
+#Other Alias ---
+alias clip='xsel --clipboard --input'
+
+# End Alias ---
+
 if [[ ! -d ~/.zplug ]];then
   git clone https://github.com/zplug/zplug ~/.zplug
 fi
