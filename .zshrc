@@ -74,6 +74,11 @@ alias gstash='git stash'
 alias gstatus='git status'
 alias gdiff='git diff'
 
+# Docker-Alias
+alias dim='docker image'
+alias dcon='docker container'
+# Docker-Alias End 
+
 #Other Alias ---
 alias clip='xsel --clipboard --input'
 
