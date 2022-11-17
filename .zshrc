@@ -77,7 +77,8 @@ alias gdiff='git diff'
 # Docker-Alias
 alias dim='docker image'
 alias dcon='docker container'
-# Docker-Alias End 
+alias dcm='docker-compose'
+# Docker-Alias End
 
 #Other Alias ---
 alias clip='xsel --clipboard --input'
