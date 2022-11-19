@@ -13,7 +13,7 @@ PROMPT='%F{green}%n%F{white}@%F{cyan}%~#%F{reset-color} '
 xmodmap -e "keycode 102 = Zenkaku_Hankaku"
 xmodmap -e "keycode 49 = End"
 autoload -Uz colors ; colors
-export EDITOR=vim
+export EDITOR=vi
 export PATH="/usr/local/bin:$HOME/bin:$PATH"
 setopt auto_pushd
 setopt pushd_ignore_dups
@@ -68,7 +68,7 @@ alias gpull='git pull'
 alias grebase='git rebase'
 alias gremote='git remote'
 alias greset='git reset'
-alias gref='git reflogs'
+alias gref='git reflog'
 alias glog'git log'
 alias gstash='git stash'
 alias gstatus='git status'
