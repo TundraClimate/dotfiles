@@ -13,4 +13,4 @@ nnoremap L 10l
 nnoremap v, ggVG
 inoremap <silent> <C-j> <C-n>
 inoremap <silent> <C-k> <C-p>
-nnoremap <silent> <Right> :tabm
+nnoremap <silent> <Right> gt
