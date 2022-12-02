@@ -9,12 +9,12 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-PROMPT='%F{green}%n%F{white}@%F{cyan}%~#%F{reset-color} '
+PROMPT='%F{cyan}%~#%F{reset-color} '
 xmodmap -e "keycode 102 = Zenkaku_Hankaku"
 xmodmap -e "keycode 49 = End"
 autoload -Uz colors ; colors
 export EDITOR=vi
-export PATH="/usr/local/bin:$HOME/bin:$PATH"
+export PATH="/usr/local/bin:$HOME/.local/share/node/bin:$HOME/bin:$PATH"
 setopt auto_pushd
 setopt pushd_ignore_dups
 setopt extended_glob
@@ -37,7 +37,7 @@ setopt correct
 zstyle ':completion:*' menu select
 setopt list_packed
 export LSCOLORS=Exfxcxdxbxegedabagacad
-export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+export LS_COLORS='di=1;33:fi=1;32:ex=4;32:ln=1;45'
 zstyle ':completion::complete:*' use-cache true
 autoload -U colors ; colors ; zstyle ':completion:*' list-colors "${LS_COLORS}"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
