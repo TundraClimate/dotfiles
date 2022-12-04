@@ -12,5 +12,6 @@ nnoremap v, ggVG
 inoremap <silent> jj <Esc>
 inoremap <silent> <C-j> <C-n>
 inoremap <silent> <C-k> <C-p>
+nnoremap <silent> <Right> gt
 inoremap <silent> <Right> <Esc>gt
 inoremap <silent> JJ <Esc>
