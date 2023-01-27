@@ -9,7 +9,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-PROMPT='%F{cyan}%~\n#%F{reset-color} '
+PROMPT='%F{cyan}%n %F{034}{ %~ }
+%F{reset-color}%# '
 xmodmap -e "keycode 102 = Zenkaku_Hankaku"
 xmodmap -e "keycode 49 = End"
 autoload -Uz colors ; colors
