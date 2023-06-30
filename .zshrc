@@ -7,12 +7,19 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+zstyle ':vcs_info:git:*' formats '%b '
+setopt PROMPT_SUBST
+
 # User configuration
 
-PROMPT='%F{cyan}%n %F{034}{ %~ }
+PROMPT='%F{cyan}%n %F{034}{ %~ }%f %K{yellow}%F{black}${vcs_info_msg_0_}%k
 %F{reset-color}%# '
 xmodmap -e "keycode 102 = Zenkaku_Hankaku"
 xmodmap -e "keycode 49 = End"
+
 autoload -Uz colors ; colors
 export EDITOR=vi
 export PATH="/usr/local/bin:$HOME/.local/share/node/bin:$HOME/bin:$PATH"
@@ -84,6 +91,8 @@ alias dcm='docker-compose'
 
 #Other Alias ---
 alias clip='xsel --clipboard --input'
+alias vi='nvim'
+alias vim='nvim'
 
 # End Alias ---
 
