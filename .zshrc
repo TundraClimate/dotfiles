@@ -15,7 +15,7 @@ setopt PROMPT_SUBST
 
 # User configuration
 
-PROMPT='%F{cyan}%n %F{034}{ %~ }%f %K{yellow}%F{black}${vcs_info_msg_0_}%k
+PROMPT='%F{cyan}%n %F{034}{ %~ }%f %F{yellow}${vcs_info_msg_0_}%k
 %F{reset-color}%# '
 xmodmap -e "keycode 102 = Zenkaku_Hankaku"
 xmodmap -e "keycode 49 = End"
