@@ -33,16 +33,13 @@ setopt pushd_ignore_dups
 setopt auto_param_keys
 setopt print_eight_bit
 setopt mark_dirs
-setopt correct
-setopt correct_all
 setopt no_clobber
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
-                   /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
+/usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
 setopt noautoremoveslash
 
 autoload -Uz compinit ; compinit
-setopt correct
 zstyle ':completion:*' menu select
 setopt list_packed
 export LSCOLORS=Exfxcxdxbxegedabagacad
