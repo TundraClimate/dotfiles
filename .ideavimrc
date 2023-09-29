@@ -10,7 +10,6 @@ nnoremap K 10k
 nnoremap L 10l
 nnoremap v, ggVG
 inoremap <silent> jj <Esc>
-inoremap <silent> <C-j> <C-n>
-inoremap <silent> <C-k> <C-p>
+inoremap <silent> <C-space> <C-n>
 inoremap <silent> <Right> <Esc>gt
 inoremap <silent> JJ <Esc>
