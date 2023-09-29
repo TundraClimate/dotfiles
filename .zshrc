@@ -91,6 +91,7 @@ zinit ice wait'!0'
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
+zinit light babarot/enhancd
 
 # pnpm
 export PNPM_HOME="/home/tundra/.local/share/pnpm"
