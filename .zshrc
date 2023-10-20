@@ -3,6 +3,10 @@ export PATH="/usr/local/bin:$HOME/bin:$PATH"
 export LSCOLORS=Exfxcxdxbxegedabagacad
 export LS_COLORS='di=1;33:fi=1;32:ex=4;32:ln=1;45'
 
+autoload -Uz vcs_info
+autoload -Uz colors ; colors ; zstyle ':completion:*' list-colors "${LS_COLORS}"
+autoload -U compinit; compinit
+
 setopt autocd
 setopt autopushd
 setopt alwaystoend
@@ -29,10 +33,6 @@ setopt magicequalsubst
 setopt promptsubst
 setopt pushdignoredups
 setopt nobeep
-
-autoload -Uz vcs_info
-autoload -Uz colors ; colors ; zstyle ':completion:*' list-colors "${LS_COLORS}"
-autoload -U compinit; compinit
 
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
   /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
