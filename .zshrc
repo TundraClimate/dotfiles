@@ -14,7 +14,9 @@ setopt histignorealldups
 setopt histignorespace
 setopt histreduceblanks
 setopt histsavenodups
+setopt histverify
 setopt sharehistory
+setopt incappendhistory
 setopt noclobber
 setopt autoparamkeys
 setopt printeightbit
@@ -23,8 +25,6 @@ setopt extendedglob
 setopt mark_dirs
 setopt noautoremoveslash
 setopt listpacked
-setopt inc_append_history
-setopt hist_verify
 setopt magicequalsubst
 setopt promptsubst
 setopt pushdignoredups
@@ -91,7 +91,6 @@ zinit ice wait'!0'
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
-zinit light babarot/enhancd
 
 # pnpm
 export PNPM_HOME="/home/tundra/.local/share/pnpm"
