@@ -38,7 +38,6 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
   /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 zstyle ':completion:*' list-colors "${LS_COLORS}"
 zstyle ':completion:*:processes' command 'ps x -o pid,s,args'
-zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' use-cache true
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:manuals' separate-sections true
@@ -48,7 +47,8 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
-PROMPT='%F{cyan}%n %F{034}{ %~ }%f %F{yellow}${vcs_info_msg_0_}%k
+PROMPT='
+%F{cyan}$(date +"%Y/%m/%d %H:%M:%S") %F{034}{ %~ }%f %F{yellow}${vcs_info_msg_0_}%k
 %F{reset-color}%# '
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
@@ -91,6 +91,13 @@ zinit ice wait'!0'
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
+zinit light chrissicool/zsh-256color
+zinit light arzzen/calc.plugin.zsh
+zinit light ael-code/zsh-colored-man-pages
+zinit light DarrinTisdale/zsh-aliases-exa
+zinit light zdharma-continuum/fast-syntax-highlighting
+zinit light QuarticCat/zsh-smartcache
+zinit light brymck/print-alias
 
 # pnpm
 export PNPM_HOME="/home/tundra/.local/share/pnpm"
