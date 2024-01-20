@@ -48,7 +48,7 @@ precmd_functions+=( precmd_vcs_info )
 
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 PROMPT='
-%F{cyan}$(date +"%Y/%m/%d %H:%M:%S") %F{034}{ %~ }%f %F{yellow}${vcs_info_msg_0_}%k
+%F{cyan}${} %F{034}{ %~ }%f %F{yellow}${vcs_info_msg_0_}%k
 %F{reset-color}%# '
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
