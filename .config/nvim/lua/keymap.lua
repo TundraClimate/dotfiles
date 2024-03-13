@@ -20,8 +20,8 @@ keymap('n', '<leader>fb', telescope.buffers, {})
 
 local mdhelper = require("markdownhelper")
 
-keymap("i", "*", mdhelper.glob)
--- keymap("i", "`", mdhelper.cspan)
+keymap("i", "**", mdhelper.glob)
+-- keymap("i", "``", mdhelper.cspan)
 -- keymap("i", "```", mdhelper.cblock)
 keymap("i", "~~", mdhelper.stth)
 -- keymap("i", "[", mdhelper.bracket)
