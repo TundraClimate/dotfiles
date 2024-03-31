@@ -32,3 +32,5 @@ vim.opt.hidden = true
 vim.opt.swapfile = false
 vim.opt.wrap = true
 vim.opt.pumblend = 7
+
+vim.cmd.colorscheme("nightfly")
