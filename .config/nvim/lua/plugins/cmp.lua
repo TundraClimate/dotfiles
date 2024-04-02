@@ -15,6 +15,13 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-nvim-lsp-signature-help",
+      "hrsh7th/cmp-nvim-lsp-document-symbol",
+      "hrsh7th/cmp-emoji",
+      "hrsh7th/cmp-calc",
+      "uga-rosa/cmp-dictionary",
+      "saadparwaiz1/cmp_luasnip",
+      "ray-x/cmp-treesitter",
     },
     event = "InsertEnter",
     opts = function()
