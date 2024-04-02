@@ -4,6 +4,8 @@ return {
     "JoosepAlviste/nvim-ts-context-commentstring",
     "nvim-treesitter/nvim-treesitter-textobjects",
     "windwp/nvim-ts-autotag",
+    "nvim-treesitter/nvim-treesitter-context",
+    "m-demare/hlargs.nvim",
   },
   event = "User AstroFile",
   cmd = {
