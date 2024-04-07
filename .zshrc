@@ -88,7 +88,6 @@ alias vi='nvim'
 alias vim='nvim'
 
 zinit ice wait'!0'
-zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light chrissicool/zsh-256color
@@ -98,6 +97,7 @@ zinit light DarrinTisdale/zsh-aliases-exa
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light QuarticCat/zsh-smartcache
 zinit light brymck/print-alias
+zinit light zsh-users/zsh-autosuggestions
 
 # pnpm
 export PNPM_HOME="/home/tundra/.local/share/pnpm"
