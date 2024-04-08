@@ -34,3 +34,4 @@ vim.opt.wrap = true
 vim.opt.pumblend = 7
 
 vim.cmd.colorscheme("nightfly")
+vim.cmd("ColorizerToggle")
