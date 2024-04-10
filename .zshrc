@@ -99,6 +99,28 @@ zinit light QuarticCat/zsh-smartcache
 zinit light brymck/print-alias
 zinit light zsh-users/zsh-autosuggestions
 
+# my cmd
+
+# ffmpeg convert mp4 alias
+function cm4 () {
+    file=$1
+    l=$#file
+    while true; do
+        flag=$file[$l]
+        file=${file[1, $((l-1))]}
+        l=$((l - 1))
+        if [ "$flag" = "." ]; then
+            break
+        fi
+    done
+    nfile="$file.mp4"
+    file=$1
+    shift
+    ffmpeg -i $file $@ $nfile
+}
+
+# my cmd end
+
 # pnpm
 export PNPM_HOME="/home/tundra/.local/share/pnpm"
 case ":$PATH:" in
