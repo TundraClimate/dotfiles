@@ -90,7 +90,10 @@ alias dcm='docker-compose'
 alias clip='xsel --clipboard --input'
 alias vi='nvim'
 alias vim='nvim'
+alias emacs="nvim"
+alias nano="nvim"
 alias ...='../..'
+alias less="less -N"
 
 zinit ice wait'!0'
 zinit light zdharma/fast-syntax-highlighting
