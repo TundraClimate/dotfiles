@@ -94,6 +94,7 @@ alias emacs="nvim"
 alias nano="nvim"
 alias ...='../..'
 alias less="less -N"
+alias ls="exa -al --icons"
 
 zinit ice wait'!0'
 zinit light zdharma/fast-syntax-highlighting
@@ -101,7 +102,6 @@ zinit light zsh-users/zsh-completions
 zinit light chrissicool/zsh-256color
 zinit light arzzen/calc.plugin.zsh
 zinit light ael-code/zsh-colored-man-pages
-zinit light DarrinTisdale/zsh-aliases-exa
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light QuarticCat/zsh-smartcache
 zinit light brymck/print-alias
