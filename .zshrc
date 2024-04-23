@@ -87,6 +87,7 @@ alias dcon='docker container'
 alias dcm='docker-compose'
 alias dim='docker image'
 
+alias .token="less ~/.token | clip"
 alias ...='../..'
 alias clip='xsel --clipboard --input'
 alias grep="rg"
