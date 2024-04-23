@@ -97,6 +97,10 @@ alias less="less -N"
 alias ls="exa -al --icons"
 alias grep="rg"
 alias ps="procs"
+alias q="exit"
+
+alias .files="~/dotfiles/"
+alias dl="~/Downloads/"
 
 zinit ice wait'!0'
 zinit light zdharma/fast-syntax-highlighting
