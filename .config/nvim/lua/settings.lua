@@ -33,7 +33,6 @@ vim.opt.swapfile = false
 vim.opt.wrap = true
 vim.opt.pumblend = 7
 vim.opt.cursorcolumn = true
-vim.opt.virtualedit = "all"
 
 vim.cmd.colorscheme("nightfly")
 vim.cmd("ColorizerToggle")
