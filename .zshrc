@@ -99,6 +99,8 @@ alias vi='nvim'
 
 alias .files="~/dotfiles/"
 alias dl="~/Downloads/"
+alias idea="~/MyStorage/IdeaProjects/"
+alias steamapps="~/.local/share/Steam/steamapps/common/"
 
 zinit ice wait'!0'
 zinit light zdharma/fast-syntax-highlighting
