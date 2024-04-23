@@ -130,6 +130,15 @@ function cm4 () {
     ffmpeg -i $file $@ $nfile
 }
 
+# dictionary sort
+function dsort () {
+    tx=""
+    for a in "$@"; do
+        tx="$tx\n$a"
+    done
+    echo $tx | sort -f
+}
+
 # my cmd end
 
 # pnpm
