@@ -142,6 +142,11 @@ function dsort () {
     echo $tx | sort -f
 }
 
+# auto ls
+function chpwd () {
+    exa -a --icons
+}
+
 # my cmd end
 
 # pnpm
