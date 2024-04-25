@@ -33,6 +33,7 @@ setopt magicequalsubst
 setopt promptsubst
 setopt pushdignoredups
 setopt nobeep
+setopt transientrprompt
 
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
   /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
@@ -50,6 +51,7 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 PROMPT='
  %F{magenta}function%f%F{cyan}(%f%F{yellow}${vcs_info_msg_0_}%f%F{cyan})%f %F{034}{ %F{222}"%~"%f %F{034}}%f 
  %F{reset-color}👉 '
+RPROMPT='⌚%F{cyan}[$(date +"%m/%d|%H:%M")]%f'
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
 SAVEHIST=1000000
