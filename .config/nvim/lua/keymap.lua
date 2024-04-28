@@ -20,12 +20,3 @@ keymap('n', '<leader>glog', telescope.git_commits, {})
 keymap('n', '<leader>gstu', telescope.git_status, {})
 
 keymap('n', '<leader>s', "<cmd>vsplit<cr>")
-
-local mdhelper = require("markdownhelper")
-
-keymap("i", "**", mdhelper.glob)
--- keymap("i", "``", mdhelper.cspan)
--- keymap("i", "```", mdhelper.cblock)
-keymap("i", "~~", mdhelper.stth)
--- keymap("i", "[", mdhelper.bracket)
--- keymap("i", "(", mdhelper.paren)
