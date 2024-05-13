@@ -105,6 +105,11 @@ alias fd="fd -Hi"
 alias idea="~/MyStorage/IdeaProjects/"
 alias steamapps="~/.local/share/Steam/steamapps/common/"
 
+alias -g G="| rg"
+alias -g L="| less"
+alias -g X="| xargs"
+alias -g XF="| xargs -L1"
+
 zinit ice wait'!0'
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
