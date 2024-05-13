@@ -178,7 +178,3 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
-
-# dotnet 8
-export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
