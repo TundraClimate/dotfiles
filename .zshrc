@@ -101,6 +101,7 @@ alias vi='nvim'
 
 alias .files="~/dotfiles/"
 alias dl="~/Downloads/"
+alias fd="fd -Hi"
 alias idea="~/MyStorage/IdeaProjects/"
 alias steamapps="~/.local/share/Steam/steamapps/common/"
 
