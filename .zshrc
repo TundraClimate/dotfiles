@@ -105,10 +105,9 @@ alias fd="fd -Hi"
 alias idea="~/MyStorage/IdeaProjects/"
 alias steamapps="~/.local/share/Steam/steamapps/common/"
 
+alias -g C="| xsel --clipboard --input"
 alias -g G="| rg"
-alias -g L="| less"
-alias -g X="| xargs"
-alias -g XF="| xargs -L1"
+alias -g L="| less -NR"
 
 zinit ice wait'!0'
 zinit light zdharma/fast-syntax-highlighting
