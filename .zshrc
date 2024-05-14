@@ -90,7 +90,7 @@ alias dcon='docker container'
 alias dcm='docker-compose'
 alias dim='docker image'
 
-alias .token="less ~/.token | clip"
+alias .token="less $HOME/.token | clip"
 alias ...='../..'
 alias clip='xsel --clipboard --input'
 alias grep="rg"
@@ -99,11 +99,11 @@ alias ps="procs"
 alias q="exit"
 alias vi='nvim'
 
-alias .files="~/dotfiles/"
-alias dl="~/Downloads/"
+alias .files="$HOME/dotfiles/"
+alias dl="$HOME/Downloads/"
 alias fd="fd -Hi"
-alias idea="~/MyStorage/IdeaProjects/"
-alias steamapps="~/.local/share/Steam/steamapps/common/"
+alias idea="$HOME/MyStorage/IdeaProjects/"
+alias steamapps="$HOME/.local/share/Steam/steamapps/common/"
 
 alias -g C="| xsel --clipboard --input"
 alias -g G="| rg"
@@ -123,7 +123,7 @@ zinit light zsh-users/zsh-autosuggestions
 # my cmd
 
 # ffmpeg convert mp4 alias
-function cm4 () {
+cm4 () {
     file=$1
     l=$#file
     while true; do
@@ -141,7 +141,7 @@ function cm4 () {
 }
 
 # dictionary sort
-function dsort () {
+dsort () {
     tx=""
     for a in "$@"; do
         tx="$tx\n$a"
@@ -150,12 +150,12 @@ function dsort () {
 }
 
 # auto ls
-function chpwd () {
+chpwd () {
     exa -a --icons
 }
 
 # show zsh colors
-function zcolor () {
+zcolor () {
     for COLOR in {0..255}; do
         for STYLE in "38;5"; do 
             TAG="\033[${STYLE};${COLOR}m"
