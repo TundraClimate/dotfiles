@@ -1,5 +1,6 @@
 export EDITOR=nvim
 export PATH="/usr/local/bin:$HOME/bin:$PATH"
+export LESS="-g -i -M -N -R"
 export LSCOLORS=Exfxcxdxbxegedabagacad
 export LS_COLORS='di=1;33:fi=1;32:ex=4;32:ln=1;45'
 
@@ -93,7 +94,6 @@ alias .token="less ~/.token | clip"
 alias ...='../..'
 alias clip='xsel --clipboard --input'
 alias grep="rg"
-alias less="less -NR"
 alias ls="exa -al --icons"
 alias ps="procs"
 alias q="exit"
@@ -107,7 +107,7 @@ alias steamapps="~/.local/share/Steam/steamapps/common/"
 
 alias -g C="| xsel --clipboard --input"
 alias -g G="| rg"
-alias -g L="| less -NR"
+alias -g L="| less"
 
 zinit ice wait'!0'
 zinit light zdharma/fast-syntax-highlighting
