@@ -124,20 +124,10 @@ zinit light zsh-users/zsh-autosuggestions
 
 # ffmpeg convert mp4 alias
 cm4 () {
-    file=$1
-    l=$#file
-    while true; do
-        flag=$file[$l]
-        file=${file[1, $((l-1))]}
-        l=$((l - 1))
-        if [ "$flag" = "." ]; then
-            break
-        fi
-    done
-    nfile="$file.mp4"
-    file=$1
+    from=$1
+    to="${1%.*}.mp4"
     shift
-    ffmpeg -i $file $@ $nfile
+    ffmpeg -i $from $@ $to
 }
 
 # dictionary sort
