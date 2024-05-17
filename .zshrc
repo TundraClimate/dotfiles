@@ -131,11 +131,6 @@ cm4 () {
     ffmpeg -i $from $@ $to
 }
 
-# convert webm to mp4
-webm2mp4 () {
-    cm4 $1 -c:v libx264 -b:v 1M -c:a aac -b:a 128k
-}
-
 # dictionary sort
 dsort () {
     tx=""
