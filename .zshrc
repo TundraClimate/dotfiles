@@ -1,13 +1,16 @@
+# Enviroment
 export EDITOR=nvim
 export PATH="/usr/local/bin:$HOME/bin:$PATH"
 export LESS="-g -i -M -N -R"
 export LSCOLORS=Exfxcxdxbxegedabagacad
 export LS_COLORS='di=1;33:fi=1;32:ex=4;32:ln=1;45'
 
+# Autoload zsh-module
 autoload -Uz vcs_info
 autoload -Uz colors ; colors ; zstyle ':completion:*' list-colors "${LS_COLORS}"
 autoload -U compinit; compinit
 
+# Options
 setopt autocd
 setopt autopushd
 setopt alwaystoend
@@ -36,6 +39,7 @@ setopt pushdignoredups
 setopt nobeep
 setopt transientrprompt
 
+# Style
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
   /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 zstyle ':completion:*' list-colors "${LS_COLORS}"
@@ -45,9 +49,11 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:manuals' separate-sections true
 zstyle ':vcs_info:git:*' formats '%b'
 
+# VCS
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 
+# Zsh variable
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 PROMPT='
  %F{171}fn%f %F{cyan}(%f%F{yellow}${vcs_info_msg_0_}%f%F{cyan})%f %F{034}{ %F{171}let%f %F{159}pwd%f = %F{222}"%~"%f; %F{034}}%f 
@@ -61,9 +67,13 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
+# xmodmap
 xmodmap -e "keycode 102 = Zenkaku_Hankaku"
 xmodmap -e "keycode 49 = End"
 
+# Aliases
+
+# Git
 alias ga="git add"
 alias gaa="git add -A"
 alias gb="git branch"
@@ -87,10 +97,12 @@ alias greset="git reset"
 alias gstash="git stash"
 alias gst="git status"
 
+# Docker
 alias dcon='docker container'
 alias dcm='docker-compose'
 alias dim='docker image'
 
+# Other
 alias .token="less $HOME/.token | clip"
 alias ...='../..'
 alias clip='xsel --clipboard --input'
@@ -100,16 +112,19 @@ alias ps="procs"
 alias q="exit"
 alias vi='nvim'
 
+# Shortcut
 alias .files="$HOME/dotfiles/"
 alias dl="$HOME/Downloads/"
 alias fd="fd -Hi"
 alias idea="$HOME/MyStorage/IdeaProjects/"
 alias steamapps="$HOME/.local/share/Steam/steamapps/common/"
 
+# Global
 alias -g C="| xsel --clipboard --input"
 alias -g G="| rg"
 alias -g L="| less"
 
+# Zinit
 zinit ice wait'!0'
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
