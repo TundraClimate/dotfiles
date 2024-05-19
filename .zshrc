@@ -110,6 +110,7 @@ alias grep="rg"
 alias ls="exa -al --icons"
 alias ps="procs"
 alias q="exit"
+alias rm="mv -t $HOME/.local/share/Trash/files/"
 alias vi='nvim'
 
 # Shortcut
