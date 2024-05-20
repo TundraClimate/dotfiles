@@ -105,6 +105,7 @@ alias dim='docker image'
 alias .token="less $HOME/.token | clip"
 alias ...='../..'
 alias clip='xsel --clipboard --input'
+alias fd="fd -Hi"
 alias grep="rg"
 alias ls="exa -al --icons"
 alias ps="procs"
@@ -113,11 +114,11 @@ alias rm="mv -t $HOME/.local/share/Trash/files/"
 alias vi='nvim'
 
 # Shortcut
-alias .files="$HOME/dotfiles/"
-alias dl="$HOME/Downloads/"
-alias fd="fd -Hi"
-alias idea="$HOME/MyStorage/IdeaProjects/"
-alias steamapps="$HOME/.local/share/Steam/steamapps/common/"
+alias -g .files="$HOME/dotfiles/"
+alias -g disps="$HOME/.local/share/applications/"
+alias -g dl="$HOME/Downloads/"
+alias -g idea="$HOME/MyStorage/IdeaProjects/"
+alias -g steamapps="$HOME/.local/share/Steam/steamapps/common/"
 
 # Global
 alias -g C="| xsel --clipboard --input"
