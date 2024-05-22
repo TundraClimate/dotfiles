@@ -16,7 +16,5 @@ local telescope = require("telescope.builtin")
 keymap('n', '<leader>ff', telescope.find_files, {})
 keymap('n', '<leader>fg', telescope.live_grep, {})
 keymap('n', '<leader>fb', telescope.buffers, {})
-keymap('n', '<leader>glog', telescope.git_commits, {})
-keymap('n', '<leader>gstu', telescope.git_status, {})
 
 keymap('n', '<leader>s', "<cmd>vsplit<cr>")
