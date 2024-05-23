@@ -110,7 +110,6 @@ alias grep="rg"
 alias ls="exa -al --icons"
 alias ps="procs"
 alias q="exit"
-alias rm="mv -f -t $HOME/.local/share/Trash/files/"
 alias vi='nvim'
 
 # Shortcut
@@ -171,6 +170,11 @@ zcolor () {
         done
     echo
     done
+}
+
+# rm command
+rm () {
+    mv -f $1 $HOME/.local/share/Trash/files/
 }
 
 # my cmd end
