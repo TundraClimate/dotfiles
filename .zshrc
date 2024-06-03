@@ -58,7 +58,6 @@ WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 PROMPT='
  %F{171}fn%f %F{cyan}(%f%F{yellow}${vcs_info_msg_0_}%f%F{cyan})%f %F{034}{ %F{171}let%f %F{159}pwd%f = %F{222}"%~"%f; %F{034}}%f 
  %F{reset-color}👉 '
-RPROMPT='⌚%F{cyan}[$(date +"%m/%d|%H:%M")]%f'
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
 SAVEHIST=1000000
