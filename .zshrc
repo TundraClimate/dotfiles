@@ -52,11 +52,8 @@ zstyle ':vcs_info:git:*' formats '%b'
 # VCS
 precmd_vcs_info() { vcs_info }
 precmd_prompt() { 
-    if [ "${vcs_info_msg_0_}" != "" ]; then
+    [ "${vcs_info_msg_0_}" != "" ] &&
         vcs="%F{178}${vcs_info_msg_0_}%f: %F{41}Branch%f" 
-    else 
-        vcs="${vcs_info_msg_0_}" 
-    fi 
 }
 precmd_functions+=( precmd_vcs_info )
 precmd_functions+=( precmd_prompt )
