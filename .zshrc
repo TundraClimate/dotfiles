@@ -52,8 +52,7 @@ zstyle ':vcs_info:git:*' formats '%b'
 # VCS
 precmd_vcs_info() { vcs_info }
 precmd_prompt() { 
-    [ "${vcs_info_msg_0_}" != "" ] &&
-        vcs="%F{178}${vcs_info_msg_0_}%f: %F{41}Branch%f" 
+     
 }
 precmd_functions+=( precmd_vcs_info )
 precmd_functions+=( precmd_prompt )
@@ -61,7 +60,7 @@ precmd_functions+=( precmd_prompt )
 # Zsh variable
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 PROMPT='
- %F{171}fn%f %F{cyan}(%f${vcs}%F{cyan})%f %F{034}{ %F{171}let%f %F{159}pwd%f = %F{222}"%~"%f; %F{034}}%f 
+ %F{171}fn%f %F{cyan}(%f$([ "${vcs_info_msg_0_}" != "" ] && vcs="%F{178}${vcs_info_msg_0_}%f: %F{41}Branch%f" && echo $vcs)%F{cyan})%f %F{034}{ %F{171}let%f %F{159}pwd%f = %F{222}"%~"%f; %F{034}}%f 
  %F{reset-color}👉 '
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
