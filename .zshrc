@@ -51,11 +51,7 @@ zstyle ':vcs_info:git:*' formats '%b'
 
 # VCS
 precmd_vcs_info() { vcs_info }
-precmd_prompt() { 
-     
-}
 precmd_functions+=( precmd_vcs_info )
-precmd_functions+=( precmd_prompt )
 
 # Zsh variable
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
