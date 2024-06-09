@@ -179,6 +179,10 @@ rm () {
     mv -f $1 $HOME/.local/share/Trash/files/
 }
 
+thumbnail () {
+    convert $1 -resize 1028x720 $1
+}
+
 # my cmd end
 
 # pnpm
