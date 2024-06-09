@@ -5,6 +5,13 @@ export LESS="-g -i -M -N -R"
 export LSCOLORS=Exfxcxdxbxegedabagacad
 export LS_COLORS='di=1;33:fi=1;32:ex=4;32:ln=1;45'
 
+# Shortcut envs
+export dotfiles="$HOME/dotfiles/"
+export disps="$HOME/.local/share/applications/"
+export dl="$HOME/Downloads/"
+export idea="$HOME/MyStorage/IdeaProjects/"
+export steamapps="$HOME/.local/share/Steam/steamapps/common/"
+
 # Autoload zsh-module
 autoload -Uz vcs_info
 autoload -Uz colors ; colors ; zstyle ':completion:*' list-colors "${LS_COLORS}"
@@ -113,13 +120,6 @@ alias mkdir="mkdir -p"
 alias ps="procs"
 alias q="exit"
 alias vi='nvim'
-
-# Shortcut
-alias -g .files="$HOME/dotfiles/"
-alias -g disps="$HOME/.local/share/applications/"
-alias -g dl="$HOME/Downloads/"
-alias -g idea="$HOME/MyStorage/IdeaProjects/"
-alias -g steamapps="$HOME/.local/share/Steam/steamapps/common/"
 
 # Global
 alias -g C="| xsel --clipboard --input"
