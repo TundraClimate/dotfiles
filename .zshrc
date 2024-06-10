@@ -1,9 +1,10 @@
 # Enviroment
 export EDITOR=nvim
 export PATH="/usr/local/bin:$HOME/bin:$PATH"
-export LESS="-g -i -M -N -R"
 export LSCOLORS=Exfxcxdxbxegedabagacad
 export LS_COLORS='di=1;33:fi=1;32:ex=4;32:ln=1;45'
+export PAGER="batcat"
+export BAT_PAGER="less -n -g -i -M -R"
 
 # Shortcut envs
 export dotfiles="$HOME/dotfiles/"
@@ -109,8 +110,9 @@ alias dcm='docker-compose'
 alias dim='docker image'
 
 # Other
-alias .token="less $HOME/.token | clip"
+alias .token="batcat $HOME/.token | clip"
 alias ...='../..'
+alias bc="batcat"
 alias clip='xsel --clipboard --input'
 alias f="touch"
 alias fd="fd -Hi"
@@ -124,7 +126,7 @@ alias vi='nvim'
 # Global
 alias -g C="| xsel --clipboard --input"
 alias -g G="| rg"
-alias -g L="| less"
+alias -g L="| batcat"
 
 # Zinit
 zinit ice wait'!0'
@@ -132,7 +134,6 @@ zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light chrissicool/zsh-256color
 zinit light arzzen/calc.plugin.zsh
-zinit light ael-code/zsh-colored-man-pages
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light QuarticCat/zsh-smartcache
 zinit light brymck/print-alias
