@@ -112,7 +112,7 @@ alias dim='docker image'
 # Other
 alias .token="batcat $HOME/.token | clip"
 alias ...='../..'
-alias bc="batcat"
+alias less="batcat"
 alias clip='xsel --clipboard --input'
 alias f="touch"
 alias fd="fd -Hi"
