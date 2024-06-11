@@ -184,6 +184,11 @@ thumbnail () {
     convert $1 -resize 1028x720 $1
 }
 
+fclip () {
+    echo -e "file://$(realpath $1)\n" | xclip -selection clipboard -t text/uri-list
+    echo "$1 copied👍"
+}
+
 # my cmd end
 
 # pnpm
