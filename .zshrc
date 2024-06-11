@@ -113,7 +113,7 @@ alias dim='docker image'
 alias .token="batcat $HOME/.token | clip"
 alias ...='../..'
 alias less="batcat"
-alias clip='xsel --clipboard --input'
+alias clip='xsel --clipboard'
 alias f="touch"
 alias fd="fd -Hi"
 alias grep="rg"
@@ -124,7 +124,7 @@ alias q="exit"
 alias vi='nvim'
 
 # Global
-alias -g C="| xsel --clipboard --input"
+alias -g C="| xsel --clipboard"
 alias -g G="| rg"
 alias -g L="| batcat"
 
