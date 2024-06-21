@@ -177,7 +177,7 @@ zcolor () {
 
 # rm command
 rm () {
-    if [ -e "$HOME/.local/share/Trash/files/" ]; then
+    if [ -e "$HOME/.local/share/Trash/files/$1" ]; then
         rm -rf "$HOME/.local/share/Trash/files/$1"
     fi
     mv -f $1 $HOME/.local/share/Trash/files/
