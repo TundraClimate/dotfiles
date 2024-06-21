@@ -177,10 +177,11 @@ zcolor () {
 
 # rm command
 rm () {
-    if [ -e "$HOME/.local/share/Trash/files/$1" ]; then
-        rm -rf "$HOME/.local/share/Trash/files/$1"
+    name=$(basename $1)
+    if [ -e "$HOME/.local/share/Trash/files/$name" ]; then
+        mv "$HOME/.local/share/Trash/files/$name" "$HOME/.local/share/Trash/files/${name}_$(date +%Y%m%d%H%M%S)"
     fi
-    mv -f $1 $HOME/.local/share/Trash/files/
+    mv -f $name $HOME/.local/share/Trash/files/
 }
 
 thumbnail () {
