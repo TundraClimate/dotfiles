@@ -181,7 +181,7 @@ rm () {
     if [ -e "$HOME/.local/share/Trash/files/$name" ]; then
         mv "$HOME/.local/share/Trash/files/$name" "$HOME/.local/share/Trash/files/${name}_$(date +%Y%m%d%H%M%S)"
     fi
-    mv -f $name $HOME/.local/share/Trash/files/
+    mv -f $1 $HOME/.local/share/Trash/files/
 }
 
 thumbnail () {
