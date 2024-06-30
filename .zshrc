@@ -1,6 +1,6 @@
 # Enviroment
 export EDITOR=nvim
-export PATH="/usr/local/bin:$HOME/bin:$PATH"
+export PATH="/usr/local/bin:$HOME/dotfiles/.localpath:$PATH"
 export LSCOLORS=Exfxcxdxbxegedabagacad
 export LS_COLORS='di=1;33:fi=1;32:ex=4;32:ln=1;45'
 export PAGER="batcat"
