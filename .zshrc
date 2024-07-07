@@ -122,6 +122,7 @@ alias mkdir="mkdir -p"
 alias ps="procs"
 alias q="exit"
 alias vi='nvim'
+aliases[=]="noglob calc"
 
 # Global
 alias -g C="| xsel --clipboard"
@@ -133,7 +134,6 @@ zinit ice wait'!0'
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light chrissicool/zsh-256color
-zinit light arzzen/calc.plugin.zsh
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit light QuarticCat/zsh-smartcache
 zinit light brymck/print-alias
@@ -191,6 +191,10 @@ thumbnail () {
 fclip () {
     echo -e "file://$(realpath $1)\n" | xclip -selection clipboard -t text/uri-list
     echo "$1 copied👍"
+}
+
+calc () {
+    echo "$*" | bc
 }
 
 # my cmd end
