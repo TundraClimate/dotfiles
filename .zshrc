@@ -12,6 +12,7 @@ export disps="$HOME/.local/share/applications/"
 export dl="$HOME/Downloads/"
 export idea="$HOME/MyStorage/IdeaProjects/"
 export steamapps="$HOME/.local/share/Steam/steamapps/common/"
+export trash="$HOME/.local/share/Trash/files/"
 
 # Autoload zsh-module
 autoload -Uz vcs_info
