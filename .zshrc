@@ -175,8 +175,8 @@ zcolor () {
     done
 }
 
-# rm command
-rm () {
+# into stash command
+is () {
     name=$(basename $1)
     if [ -e "$HOME/.local/share/Trash/files/$name" ]; then
         mv "$HOME/.local/share/Trash/files/$name" "$HOME/.local/share/Trash/files/${name}_$(date +%Y%m%d%H%M%S)"
