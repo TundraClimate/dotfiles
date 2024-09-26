@@ -1,10 +1,9 @@
 # Enviroment
 export EDITOR=nvim
 export PATH="/usr/local/bin:$HOME/dotfiles/.localpath:$PATH"
+export LESS="-g -i -M -n -R"
 export LSCOLORS=Exfxcxdxbxegedabagacad
 export LS_COLORS='di=1;33:fi=1;32:ex=4;32:ln=1;45'
-export PAGER="batcat"
-export BAT_PAGER="less -n -g -i -M -R"
 
 # Shortcut envs
 export dotfiles="$HOME/dotfiles/"
@@ -111,9 +110,8 @@ alias dcm='docker-compose'
 alias dim='docker image'
 
 # Other
-alias .token="batcat $HOME/.token | clip"
+alias .token="cat $HOME/.token | clip"
 alias ...='../..'
-alias less="batcat"
 alias clip='xsel --clipboard'
 alias f="touch"
 alias fd="fd -Hi"
@@ -128,7 +126,7 @@ aliases[=]="noglob calc"
 # Global
 alias -g C="| xsel --clipboard"
 alias -g G="| rg"
-alias -g L="| batcat"
+alias -g L="| less"
 
 # Zinit
 zinit ice wait'!0'
