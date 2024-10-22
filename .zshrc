@@ -116,7 +116,7 @@ alias clip='xsel --clipboard'
 alias f="touch"
 alias fd="fd -Hi"
 alias grep="rg"
-alias ls="exa -al --icons"
+alias ls="eza -al --icons"
 alias mkdir="mkdir -p"
 alias ps="procs"
 alias q="exit"
@@ -159,7 +159,7 @@ dsort () {
 
 # auto ls
 chpwd () {
-    exa -a --icons
+    eza -a --icons
 }
 
 # show zsh colors

@@ -14,7 +14,7 @@ local on_attach = function(_, bufnr)
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   --buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts) -- 宣言元に飛ぶやつ
-  --buf_set_keymap('n', '<C-d>', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts) -- 定義元に飛ぶやつ (１つ上と合わせてCTRL-クリックでいける)
+  buf_set_keymap('n', '<leader>j', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts) -- 定義元に飛ぶやつ (１つ上と合わせてCTRL-クリックでいける)
   buf_set_keymap('n', '<A-enter>', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
   --buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts) -- 実装されてるリストを表示するやつ (grepでいい)
   --buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts) -- カーソル下のシグネチャー表示(よく分からん)
