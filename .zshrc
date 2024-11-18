@@ -148,6 +148,12 @@ cm4 () {
     ffmpeg -i $from $@ $to
 }
 
+# into png command
+topng () {
+    convert $1 $2
+    rm $1
+}
+
 # dictionary sort
 dsort () {
     tx=""
