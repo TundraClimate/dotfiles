@@ -176,11 +176,13 @@ zcolor () {
 
 # into stash command
 is () {
-    name=$(basename $1)
-    if [ -e "$HOME/.local/share/Trash/files/$name" ]; then
-        mv "$HOME/.local/share/Trash/files/$name" "$HOME/.local/share/Trash/files/${name}_$(date +%Y%m%d%H%M%S)"
-    fi
-    mv -f $1 $HOME/.local/share/Trash/files/
+    for file in "$@"; do
+        name=$(basename $file)
+        if [ -e "$HOME/.local/share/Trash/files/$name" ]; then
+            mv "$HOME/.local/share/Trash/files/$name" "$HOME/.local/share/Trash/files/${name}_$(date +%Y%m%d%H%M%S)"
+        fi
+        mv -f $file $HOME/.local/share/Trash/files/
+    done
 }
 
 thumbnail () {
