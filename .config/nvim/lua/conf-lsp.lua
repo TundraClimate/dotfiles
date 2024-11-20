@@ -37,9 +37,9 @@ nvim_lsp.rust_analyzer.setup {
   on_attach = on_attach,
 }
 
--- nvim_lsp.csharp_ls.setup {
---   on_attach = on_attach,
--- }
+nvim_lsp.omnisharp.setup {
+  on_attach = on_attach,
+}
 
 nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
