@@ -150,7 +150,7 @@ cm4 () {
 
 # into png command
 topng () {
-    convert $1 $2
+    convert $1 ${1%.*}.png
     rm $1
 }
 
