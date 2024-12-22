@@ -11,6 +11,7 @@ keymap('n', 'K', '10k')
 keymap('n', 'L', '10l')
 keymap('n', '<right>', '<cmd>bNext<cr>')
 keymap('n', '<up>', function() vim.api.nvim_buf_delete(0, { force = true }) end)
+keymap('n', 'EE', 'f{a<enter><esc>ko')
 
 local telescope = require("telescope.builtin")
 
