@@ -75,9 +75,15 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # xmodmap
-xmodmap -e "keycode 102 = Zenkaku_Hankaku"
-xmodmap -e "keycode 49 = End"
-xmodmap -e "keycode 66 = Return"
+
+loadxmodmap () {
+    xmodmap -e "keycode 102 = Zenkaku_Hankaku"
+    xmodmap -e "keycode 49 = End"
+    xmodmap -e "keycode 66 = Return"
+}
+
+bindkey -s "^r" "loadxmodmap\n"
+loadxmodmap
 
 # Aliases
 
