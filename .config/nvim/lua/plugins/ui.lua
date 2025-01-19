@@ -13,6 +13,10 @@ return {
     opts = {}
   },
   {
+    "stevearc/dressing.nvim",
+    opts = {}
+  },
+  {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
     event = "BufEnter",
