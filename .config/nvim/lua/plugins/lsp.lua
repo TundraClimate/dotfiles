@@ -2,6 +2,22 @@ return {
   {
     "neovim/nvim-lspconfig",
     event = "BufEnter",
+    dependencies = {
+      {
+        "williamboman/mason-lspconfig.nvim",
+        lazy = false,
+        dependencies = {
+          {
+            "williamboman/mason.nvim",
+            lazy = false,
+            cmd = "Mason",
+            build = ":MasonUpdate",
+            opts = {},
+          },
+        },
+        opts = {},
+      },
+    },
     config = function()
       local nvim_lsp = require("lspconfig")
 
@@ -67,16 +83,6 @@ return {
         on_attach = on_attach,
       })
     end,
-  },
-  {
-    "williamboman/mason.nvim",
-    lazy = false,
-    dependencies = {
-      "williamboman/mason-lspconfig.nvim",
-    },
-    cmd = "Mason",
-    build = ":MasonUpdate",
-    opts = {},
   },
   {
     "nvimtools/none-ls.nvim",
