@@ -14,7 +14,41 @@ return {
   },
   {
     "stevearc/dressing.nvim",
+    event = "BufEnter",
     opts = {}
+  },
+  {
+    "onsails/lspkind.nvim",
+    event = "BufEnter",
+    opts = {
+      symbol_map = {
+        Text = "󰉿",
+        Method = "󰆧",
+        Function = "󰊕",
+        Constructor = "",
+        Field = "󰜢",
+        Variable = "󰀫",
+        Class = "󰠱",
+        Interface = "",
+        Module = "",
+        Property = "󰜢",
+        Unit = "󰑭",
+        Value = "󰎠",
+        Enum = "",
+        Keyword = "󰌋",
+        Snippet = "",
+        Color = "󰏘",
+        File = "󰈙",
+        Reference = "󰈇",
+        Folder = "󰉋",
+        EnumMember = "",
+        Constant = "󰏿",
+        Struct = "󰙅",
+        Event = "",
+        Operator = "󰆕",
+        TypeParameter = "",
+      },
+    }
   },
   {
     "lukas-reineke/indent-blankline.nvim",
