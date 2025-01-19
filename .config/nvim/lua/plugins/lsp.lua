@@ -7,7 +7,7 @@ return {
 
       local on_attach = function(_, bufnr)
         local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-        local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
+        local function buf_set_option(k, v) vim.api.nvim_set_option_value(k, v, { buf = bufnr}) end
 
         --Enable completion triggered by <c-x><c-o>
         buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -45,6 +45,14 @@ return {
 
       nvim_lsp.lua_ls.setup {
         on_attach = on_attach,
+        settings = {
+          Lua = {
+            diagnostics = { globals = { "vim" } },
+            workspace = {
+              library = vim.api.nvim_get_runtime_file("", true),
+            },
+          },
+        },
       }
 
       nvim_lsp.ts_ls.setup {
