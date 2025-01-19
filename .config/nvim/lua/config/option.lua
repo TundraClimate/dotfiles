@@ -35,7 +35,6 @@ vim.opt.pumblend = 7
 vim.opt.cursorcolumn = true
 
 vim.cmd.colorscheme("nightfly")
--- vim.cmd("ColorizerToggle")
 
 -- ibl settings
 -- vim.cmd [[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]]
