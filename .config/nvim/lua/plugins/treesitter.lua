@@ -1,7 +1,10 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    dependencies = { { "nvim-treesitter/nvim-treesitter-textobjects", lazy = true } },
+    dependencies = {
+      { "nvim-treesitter/nvim-treesitter-textobjects", lazy = true },
+      { "m-demare/hlargs.nvim" },
+    },
     event = "BufEnter",
     cmd = {
       "TSBufDisable",
@@ -89,15 +92,15 @@ return {
             ["<A"] = { query = "@parameter.inner", desc = "Swap previous argument" },
           },
         },
-      }
+      },
     },
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
-    end
+    end,
   },
   {
     "windwp/nvim-ts-autotag",
     event = "BufEnter",
-    opts = {}
-  }
+    opts = {},
+  },
 }
