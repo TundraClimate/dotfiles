@@ -59,3 +59,5 @@ vim.opt.list = true
 --     "IndentBlanklineIndent6",
 --   },
 -- }
+
+vim.notify = require("notify")
