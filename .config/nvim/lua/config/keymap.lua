@@ -14,10 +14,10 @@ keymap('n', '<up>', function() vim.api.nvim_buf_delete(0, { force = true }) end)
 keymap('n', '<C-e><C-e>', 'f{a<enter><esc>ko')
 keymap('n', '??', 'f;i?<esc>')
 
-local telescope = require("telescope.builtin")
-
-keymap('n', '<leader>ff', telescope.find_files, {})
-keymap('n', '<leader>fg', telescope.live_grep, {})
-keymap('n', '<leader>fb', telescope.buffers, {})
-keymap('n', '<leader>fc', telescope.current_buffer_fuzzy_find, {})
-keymap('n', '<leader>fr', telescope.lsp_references, {})
+-- local telescope = require("telescope.builtin")
+-- 
+-- keymap('n', '<leader>ff', telescope.find_files, {})
+-- keymap('n', '<leader>fg', telescope.live_grep, {})
+-- keymap('n', '<leader>fb', telescope.buffers, {})
+-- keymap('n', '<leader>fc', telescope.current_buffer_fuzzy_find, {})
+-- keymap('n', '<leader>fr', telescope.lsp_references, {})
