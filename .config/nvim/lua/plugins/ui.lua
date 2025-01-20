@@ -109,4 +109,9 @@ return {
       },
     },
   },
+  {
+    "MeanderingProgrammer/markdown.nvim",
+    event = "BufEnter",
+    opts = {},
+  },
 }
