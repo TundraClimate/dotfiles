@@ -19,10 +19,33 @@ keymap("n", "<C-s>", "<cmd>w<cr>")
 
 local telescope = require("telescope.builtin")
 
+local function has_git_changes()
+  local gitsigns = require("gitsigns")
+
+  local hunks = gitsigns.get_hunks()
+  if hunks and #hunks > 0 then
+    return true
+  else
+    return false
+  end
+end
+
 keymap("n", "<leader>ff", telescope.find_files, {})
 keymap("n", "<leader>fg", telescope.live_grep, {})
 keymap("n", "<leader>fb", telescope.buffers, {})
 keymap("n", "<leader>fc", telescope.current_buffer_fuzzy_find, {})
 keymap("n", "<leader>fr", telescope.lsp_references, {})
-keymap("n", "<leader>gc", telescope.git_commits, {})
-keymap("n", "<leader>gt", telescope.git_status, {})
+keymap("n", "<leader>gc", function()
+  if has_git_changes() then
+    telescope.git_commits()
+  else
+    require("notify")("Buffer no changes")
+  end
+end, {})
+keymap("n", "<leader>gt", function()
+  if has_git_changes() then
+    telescope.git_status()
+  else
+    require("notify")("Buffer no changes")
+  end
+end, {})
