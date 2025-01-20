@@ -33,13 +33,7 @@ return {
           documentation = cmp.config.window.bordered(border_opts),
         },
         mapping = cmp.mapping.preset.insert({
-          ["<tab>"] = function(fallback)
-            if cmp.visible() then
-              cmp.select_next_item()
-            else
-              fallback()
-            end
-          end,
+          ["<tab>"] = cmp.mapping.select_next_item(),
           ["<C-j>"] = cmp.mapping.select_next_item(),
           ["<C-k>"] = cmp.mapping.select_prev_item(),
           ["<CR>"] = cmp.mapping.confirm({ select = true }),
