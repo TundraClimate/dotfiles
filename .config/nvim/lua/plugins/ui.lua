@@ -84,4 +84,29 @@ return {
       require("ibl").setup(opts)
     end,
   },
+  {
+    "petertriho/nvim-scrollbar",
+    event = "BufEnter",
+    opts = {
+      handle = {
+        blend = 10,
+        color = "#226688",
+      },
+      marks = {
+        Search = {
+          text = "-",
+          color = "#F0F0F0",
+        },
+        Error = {
+          color = "#FF0000",
+        },
+        Warn = {
+          color = "#FFFF00",
+        },
+      },
+      handlers = {
+        cursor = false,
+      },
+    },
+  },
 }
