@@ -60,4 +60,5 @@ vim.opt.list = true
 -- }
 
 vim.notify = require("notify")
+
 vim.g.icons_enabled = true

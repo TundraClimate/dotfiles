@@ -50,7 +50,7 @@ return {
             else
               require("neo-tree.ui.renderer").focus_node(state, node:get_child_ids()[1])
             end
-          else 
+          else
             state.commands.open(state)
           end
         end,
