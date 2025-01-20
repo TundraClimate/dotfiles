@@ -5,7 +5,9 @@ return {
     specs = {
       { "nvim-lua/plenary.nvim", lazy = true },
     },
-    opts = {},
+    opts = {
+      background_colour = "#181825",
+    },
   },
   {
     "catgoose/nvim-colorizer.lua",
