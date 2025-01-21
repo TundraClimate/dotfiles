@@ -38,6 +38,22 @@ return {
                 return false
               end
 
+              if entry1.source.name == "nvim_lsp" and entry2.source.name == "nvim_lsp" then
+                local kind1 = entry1.completion_item.kind
+                local kind2 = entry2.completion_item.kind
+                if
+                    kind1 == vim.lsp.protocol.CompletionItemKind.Variable
+                    and kind2 ~= vim.lsp.protocol.CompletionItemKind.Variable
+                then
+                  return true
+                elseif
+                    kind2 == vim.lsp.protocol.CompletionItemKind.Variable
+                    and kind1 ~= vim.lsp.protocol.CompletionItemKind.Variable
+                then
+                  return false
+                end
+              end
+
               return nil
             end,
             cmp.config.compare.offset,
