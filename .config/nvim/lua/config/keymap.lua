@@ -43,3 +43,11 @@ keymap("n", "<leader>gt", function()
     require("notify")("Buffer no changes")
   end
 end, {})
+keymap("n", "<leader>gd", function()
+  if has_git_changes() then
+    require("gitsigns").diffthis(_, { split = "botright" })
+    vim.cmd("wincmd l")
+  else
+    require("notify")("Buffer no changes")
+  end
+end)
