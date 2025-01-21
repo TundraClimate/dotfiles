@@ -35,13 +35,7 @@ keymap("n", "<leader>fg", telescope.live_grep, {})
 keymap("n", "<leader>fb", telescope.buffers, {})
 keymap("n", "<leader>fc", telescope.current_buffer_fuzzy_find, {})
 keymap("n", "<leader>fr", telescope.lsp_references, {})
-keymap("n", "<leader>gc", function()
-  if has_git_changes() then
-    telescope.git_commits()
-  else
-    require("notify")("Buffer no changes")
-  end
-end, {})
+keymap("n", "<leader>gc", telescope.git_commits, {})
 keymap("n", "<leader>gt", function()
   if has_git_changes() then
     telescope.git_status()
