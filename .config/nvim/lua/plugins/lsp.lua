@@ -1,23 +1,7 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    event = "BufEnter",
-    dependencies = {
-      {
-        "williamboman/mason-lspconfig.nvim",
-        lazy = false,
-        dependencies = {
-          {
-            "williamboman/mason.nvim",
-            lazy = false,
-            cmd = "Mason",
-            build = ":MasonUpdate",
-            opts = {},
-          },
-        },
-        opts = {},
-      },
-    },
+    lazy = true,
     config = function()
       local nvim_lsp = require("lspconfig")
 
