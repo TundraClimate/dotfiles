@@ -45,8 +45,21 @@ keymap("n", "<leader>gt", function()
 end, {})
 keymap("n", "<leader>gd", function()
   if has_git_changes() then
+    local current_win = vim.api.nvim_get_current_win()
+    local wins_before = vim.api.nvim_list_wins()
+
     require("gitsigns").diffthis(_, { split = "botright" })
-    vim.cmd("wincmd l")
+
+    vim.defer_fn(function()
+      local wins_after = vim.api.nvim_list_wins()
+
+      for _, win in ipairs(wins_after) do
+        if not vim.tbl_contains(wins_before, win) and win ~= current_win then
+          vim.api.nvim_set_current_win(win)
+          break
+        end
+      end
+    end, 100)
   else
     require("notify")("Buffer no changes")
   end
