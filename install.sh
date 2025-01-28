@@ -16,5 +16,8 @@ echo create ec conf symlink
 if [ ! -d ${HOME}/.config/emoji-commit ]; then
   ln -s ${PWD}/.config/emoji-commit ${HOME}/.config/emoji-commit
 fi
-
-source ${HOME}/.zshrc
+echo init ssh config
+if [ ! -d ${HOME}/.ssh/config ]; then
+  chmod 600 ${PWD}/.ssh/config
+  ln -s ${PWD}/.ssh/config ${HOME}/.ssh/config
+fi
