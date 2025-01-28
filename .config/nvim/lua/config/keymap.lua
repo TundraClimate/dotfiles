@@ -36,6 +36,7 @@ keymap("n", "<leader>fb", telescope.buffers, {})
 keymap("n", "<leader>fc", telescope.current_buffer_fuzzy_find, {})
 keymap("n", "<leader>fr", telescope.lsp_references, {})
 keymap("n", "<leader>gc", telescope.git_commits, {})
+keymap("n", "<leader>t", telescope.diagnostics, {})
 keymap("n", "<leader>gt", function()
   if has_git_changes() then
     telescope.git_status()
