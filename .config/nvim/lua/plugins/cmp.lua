@@ -17,6 +17,7 @@ return {
       }
       return {
         matching = {
+          disallow_partial_matching = true,
           disallow_fuzzy_matching = true,
         },
         sorting = {
@@ -89,9 +90,15 @@ return {
           ["<CR>"] = cmp.mapping.confirm({ select = true }),
         }),
         sources = cmp.config.sources({
-          { name = "nvim_lsp", priority = 1000 },
-          { name = "buffer",   priority = 250 },
-          { name = "path",     priority = 100 },
+          {
+            name = "nvim_lsp",
+            entry_filter = function(entry)
+              local lsp_kinds = require("cmp.types").lsp.CompletionItemKind
+              return entry:get_kind() ~= lsp_kinds.Text -- Text 以外の候補のみ許可
+            end,
+          },
+          { name = "buffer" },
+          { name = "path" },
         }),
       }
     end,
