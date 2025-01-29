@@ -90,6 +90,17 @@ return {
     "petertriho/nvim-scrollbar",
     event = "BufEnter",
     opts = {
+      excluded_filetypes = {
+        "dropbar_menu",
+        "dropbar_menu_fzf",
+        "DressingInput",
+        "cmp_docs",
+        "cmp_menu",
+        "noice",
+        "prompt",
+        "TelescopePrompt",
+        "neo-tree",
+      },
       handle = {
         blend = 10,
         color = "#226688",
