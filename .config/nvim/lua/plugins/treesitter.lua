@@ -5,7 +5,7 @@ return {
       { "nvim-treesitter/nvim-treesitter-textobjects", lazy = true },
       { "m-demare/hlargs.nvim" },
     },
-    event = "BufEnter",
+    event = "BufReadPre",
     cmd = {
       "TSBufDisable",
       "TSBufEnable",
@@ -100,7 +100,7 @@ return {
   },
   {
     "windwp/nvim-ts-autotag",
-    event = "BufEnter",
+    event = "BufRead",
     opts = {},
   },
 }

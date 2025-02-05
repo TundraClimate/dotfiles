@@ -1,7 +1,7 @@
 return {
   {
     "rcarriga/nvim-notify",
-    event = "BufEnter",
+    lazy = false,
     specs = {
       { "nvim-lua/plenary.nvim", lazy = true },
     },
@@ -16,7 +16,7 @@ return {
   },
   {
     "stevearc/dressing.nvim",
-    event = "BufEnter",
+    event = "BufRead",
     opts = {},
   },
   {
@@ -57,7 +57,7 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
-    event = "BufEnter",
+    event = "BufRead",
     opts = {
       indent = {
         char = "▏",
@@ -88,7 +88,7 @@ return {
   },
   {
     "petertriho/nvim-scrollbar",
-    event = "BufEnter",
+    event = "BufRead",
     opts = {
       excluded_filetypes = {
         "dropbar_menu",
@@ -124,7 +124,7 @@ return {
   },
   {
     "MeanderingProgrammer/markdown.nvim",
-    event = "BufEnter",
+    event = "BufRead",
     opts = {},
   },
 }

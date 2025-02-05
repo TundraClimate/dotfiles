@@ -1,6 +1,6 @@
 return {
   "numToStr/Comment.nvim",
-  event = "BufEnter",
+  event = "BufRead",
   opts = {
     toggler = {
       line = "<leader>/",
