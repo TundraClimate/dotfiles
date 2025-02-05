@@ -49,7 +49,7 @@ keymap("n", "<leader>gd", function()
     local current_win = vim.api.nvim_get_current_win()
     local wins_before = vim.api.nvim_list_wins()
 
-    require("gitsigns").diffthis(_, { vertical = true, split = "botright" })
+    require("gitsigns").diffthis()
 
     vim.defer_fn(function()
       local wins_after = vim.api.nvim_list_wins()
