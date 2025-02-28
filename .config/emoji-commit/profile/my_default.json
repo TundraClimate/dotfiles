@@ -8,6 +8,10 @@
     "prefix": "⚡️fix: "
   },
   {
+    "key": "hotfix",
+    "prefix": "⚡️hotfix🔥: "
+  },
+  {
     "key": "refactor",
     "prefix": "♻️refactor: "
   },
