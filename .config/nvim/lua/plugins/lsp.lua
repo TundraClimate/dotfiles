@@ -75,22 +75,4 @@ return {
       })
     end,
   },
-  {
-    "nvimtools/none-ls.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      local nls = require("null-ls")
-
-      nls.setup({
-        sources = {
-          nls.builtins.code_actions.textlint,
-          nls.builtins.completion.spell,
-          nls.builtins.completion.tags,
-          nls.builtins.diagnostics.hadolint,
-          nls.builtins.formatting.csharpier,
-          nls.builtins.formatting.stylua,
-        },
-      })
-    end,
-  },
 }
