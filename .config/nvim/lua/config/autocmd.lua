@@ -10,10 +10,3 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     end
   end,
 })
-
-vim.api.nvim_create_autocmd("VimEnter", {
-  group = "my_autocmd",
-  callback = function()
-    vim.fn.jobstart({ "nvim", "--headless", "'Lazy! sync'", "+qa" }, { detach = true })
-  end,
-})
