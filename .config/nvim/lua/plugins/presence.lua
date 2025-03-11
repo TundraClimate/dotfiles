@@ -9,6 +9,6 @@ return {
     editing_text = "Editing %s✏️",
     file_explorer_text = "Browsing %s🌏",
     reading_text = "Reading %s📖",
-    workspace_text = "Working on %s😎",
+    workspace_text = "Working on %s/😎",
   },
 }
