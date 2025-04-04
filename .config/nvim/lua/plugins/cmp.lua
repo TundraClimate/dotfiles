@@ -23,7 +23,8 @@ return {
         sorting = {
           comparators = {
             function(entry1, entry2)
-              local prefix = "^" .. vim.api.nvim_get_current_line():match("%S+")
+              local current_word = vim.api.nvim_get_current_line():match("%S+") or ""
+              local prefix = "^" .. current_word
               local ok, match1 = pcall(function()
                 return entry1.completion_item.label:match(prefix)
               end)
