@@ -33,7 +33,7 @@ return {
               local k, match2 = pcall(function()
                 return entry2.completion_item.label:match(prefix)
               end)
-              if not k or not match1 then
+              if not k or not match2 then
                 return nil
               end
 
