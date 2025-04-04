@@ -50,7 +50,10 @@ return {
         },
       })
 
+      local omnisharp_bin = "/home/tundra/.local/share/nvim/mason/bin/omnisharp"
+
       nvim_lsp.omnisharp.setup({
+        cmd = { omnisharp_bin },
         on_attach = on_attach,
       })
 
