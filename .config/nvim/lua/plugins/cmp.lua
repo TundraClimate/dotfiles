@@ -24,8 +24,18 @@ return {
           comparators = {
             function(entry1, entry2)
               local prefix = "^" .. vim.api.nvim_get_current_line():match("%S+")
-              local match1 = entry1.completion_item.label:match(prefix)
-              local match2 = entry2.completion_item.label:match(prefix)
+              local ok, match1 = pcall(function()
+                return entry1.completion_item.label:match(prefix)
+              end)
+              if not ok or not match1 then
+                return nil
+              end
+              local k, match2 = pcall(function()
+                return entry2.completion_item.label:match(prefix)
+              end)
+              if not k or not match1 then
+                return nil
+              end
 
               if match1 and not match2 then
                 return true
