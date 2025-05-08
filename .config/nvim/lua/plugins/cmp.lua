@@ -23,6 +23,22 @@ return {
         sorting = {
           comparators = {
             function(entry1, entry2)
+              if entry1.source.name == "nvim_lsp" and entry2.source.name == "nvim_lsp" then
+                local kind1 = entry1.completion_item.kind
+                local kind2 = entry2.completion_item.kind
+                if
+                    kind1 == vim.lsp.protocol.CompletionItemKind.Variable
+                    and kind2 ~= vim.lsp.protocol.CompletionItemKind.Variable
+                then
+                  return true
+                elseif
+                    kind2 == vim.lsp.protocol.CompletionItemKind.Variable
+                    and kind1 ~= vim.lsp.protocol.CompletionItemKind.Variable
+                then
+                  return false
+                end
+              end
+
               local current_word = vim.api.nvim_get_current_line():match("%S+") or ""
               local prefix = "^" .. current_word
               local ok, match1 = pcall(function()
@@ -48,22 +64,6 @@ return {
                 return true
               elseif entry2.source.name == "nvim_lsp" and entry1.source.name ~= "nvim_lsp" then
                 return false
-              end
-
-              if entry1.source.name == "nvim_lsp" and entry2.source.name == "nvim_lsp" then
-                local kind1 = entry1.completion_item.kind
-                local kind2 = entry2.completion_item.kind
-                if
-                    kind1 == vim.lsp.protocol.CompletionItemKind.Variable
-                    and kind2 ~= vim.lsp.protocol.CompletionItemKind.Variable
-                then
-                  return true
-                elseif
-                    kind2 == vim.lsp.protocol.CompletionItemKind.Variable
-                    and kind1 ~= vim.lsp.protocol.CompletionItemKind.Variable
-                then
-                  return false
-                end
               end
 
               return nil
@@ -105,7 +105,7 @@ return {
             name = "nvim_lsp",
             entry_filter = function(entry)
               local lsp_kinds = require("cmp.types").lsp.CompletionItemKind
-              return entry:get_kind() ~= lsp_kinds.Text and entry:get_kind() ~= 15
+              return entry:get_kind() ~= lsp_kinds.Text and entry:get_kind() ~= lsp_kinds.Snippet
             end,
           },
           { name = "buffer" },
