@@ -105,7 +105,7 @@ return {
             name = "nvim_lsp",
             entry_filter = function(entry)
               local lsp_kinds = require("cmp.types").lsp.CompletionItemKind
-              return entry:get_kind() ~= lsp_kinds.Text -- Text 以外の候補のみ許可
+              return entry:get_kind() ~= lsp_kinds.Text and entry:get_kind() ~= 15
             end,
           },
           { name = "buffer" },
