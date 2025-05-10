@@ -1,3 +1,6 @@
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = false
+
 return {
   cmd = { "rust-analyzer" },
   filetypes = { "rust" },
@@ -7,8 +10,14 @@ return {
       check = {
         command = "clippy",
       },
+      completion = {
+        autoimport = {
+          enable = false,
+        },
+      },
     },
   },
+  capabilities = capabilities,
   on_attach = function(_, bufnr)
     local function buf_set_keymap(...)
       vim.api.nvim_buf_set_keymap(bufnr, ...)
