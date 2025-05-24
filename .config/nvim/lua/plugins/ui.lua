@@ -125,6 +125,6 @@ return {
   {
     "MeanderingProgrammer/markdown.nvim",
     event = "BufRead",
-    opts = {},
+    --[[ opts = {}, ]]
   },
 }
