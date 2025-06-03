@@ -74,17 +74,6 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source "${ZINIT_HOME}/zinit.zsh"
 
-# xmodmap
-
-loadxmodmap () {
-    xmodmap -e "keycode 102 = Zenkaku_Hankaku"
-    xmodmap -e "keycode 49 = End"
-    xmodmap -e "keycode 66 = Return"
-}
-
-bindkey -s "^r" "loadxmodmap\n"
-loadxmodmap
-
 # Aliases
 
 # Git
