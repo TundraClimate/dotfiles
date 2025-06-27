@@ -7,6 +7,9 @@ return {
   settings = {
     ["rust-analyzer"] = {
       checkOnSave = true,
+      cargo = {
+        allFeatures = true,
+      },
       check = {
         command = "clippy",
       },
