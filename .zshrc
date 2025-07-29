@@ -123,6 +123,10 @@ alias -g C="| xsel --clipboard"
 alias -g G="| rg"
 alias -g L="| less"
 
+# Bindkey
+bindkey -s "^e" "nvim .\n"
+bindkey -s "^o" "ep .\n"
+
 # Zinit
 zinit ice wait'!0'
 zinit light zdharma/fast-syntax-highlighting
