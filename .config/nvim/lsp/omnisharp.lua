@@ -1,5 +1,5 @@
 return {
-  cmd = { "/home/tundra/.local/share/nvim/mason/bin/omnisharp" },
+  cmd = { "/home/tundra/.local/share/nvim/mason/bin/OmniSharp" },
   filetypes = { "cs" },
   on_attach = function(_, bufnr)
     local function buf_set_keymap(...)
