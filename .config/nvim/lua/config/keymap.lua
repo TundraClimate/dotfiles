@@ -24,6 +24,8 @@ keymap("n", "<C-e><C-e>", "f{a<enter><esc>ko")
 keymap("n", "??", "f;i?<esc>")
 keymap("n", "<C-s>", "<cmd>w<cr>")
 
+keymap("n", "&", "bi&<esc>")
+
 local telescope = require("telescope.builtin")
 
 local function has_git_changes()
