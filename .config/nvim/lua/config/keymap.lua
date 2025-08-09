@@ -23,6 +23,7 @@ end)
 keymap("n", "<C-e><C-e>", "f{a<enter><esc>ko")
 keymap("n", "??", "f;i?<esc>")
 keymap("n", "<C-s>", "<cmd>w<cr>")
+keymap("n", "<TAB>", "<c-w><c-w>")
 
 keymap("n", "&", "bi&<esc>")
 
