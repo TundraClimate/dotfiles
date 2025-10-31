@@ -80,7 +80,7 @@ return {
         preselect = cmp.PreselectMode.None,
         formatting = {
           format = lspkind.cmp_format({
-            mode = "symbol",
+            mode = "text",
             maxwidth = {
               menu = 50,
               abbr = 50,
