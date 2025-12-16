@@ -1,5 +1,5 @@
 return {
-    cmd = { "OmniSharp", "-hpid", tostring(vim.fn.getpid()), "-lsp" },
+    cmd = { "OmniSharp", "-lsp" },
     filetypes = { "cs" },
     settings = {},
     on_attach = function(_, bufnr)
