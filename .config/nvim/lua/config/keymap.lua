@@ -5,6 +5,7 @@ keymap("i", "ｊｊ", "<esc>")
 keymap("i", "JJ", "<esc>")
 
 keymap("n", "j", "gj")
+keymap("n", "k", "gk")
 keymap("n", "H", "10h")
 keymap("n", "J", "10gj")
 keymap("n", "K", "10gk")
