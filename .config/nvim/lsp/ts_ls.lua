@@ -1,6 +1,6 @@
 return {
     cmd = { "typescript-language-server", "--stdio" },
-    filetypes = { "typescript", "typescript.tsx" },
+    filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
     on_attach = function(_, bufnr)
         local function buf_set_keymap(...)
             vim.api.nvim_buf_set_keymap(bufnr, ...)
