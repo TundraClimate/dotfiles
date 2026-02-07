@@ -1,1 +1,1 @@
-vim.lsp.enable({ "rust_analyzer", "lua_ls", "ts_ls", "omnisharp" })
+vim.lsp.enable({ "rust_analyzer", "lua_ls", "ts_ls", "omnisharp", "cssls" })
