@@ -13,7 +13,7 @@ return {
                     nls.builtins.completion.tags,
                     nls.builtins.diagnostics.hadolint,
                     nls.builtins.formatting.prettier,
-                    nls.builtins.formatting.csharpier,
+                    --[[ nls.builtins.formatting.csharpier, ]]
                     nls.builtins.formatting.stylua,
                     nls.builtins.formatting.shfmt,
                 },
@@ -38,7 +38,13 @@ return {
             "nvimtools/none-ls.nvim",
         },
         opts = {
-            ensure_installed = { "textlint", "hadolint", "prettier", "csharpier", "stylua", "shfmt" },
+            ensure_installed = {
+                "textlint",
+                "hadolint",
+                "prettier", --[[ "csharpier", ]]
+                "stylua",
+                "shfmt",
+            },
         },
     },
 }
