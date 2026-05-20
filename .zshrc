@@ -99,6 +99,7 @@ alias gorigin="git remote add origin"
 alias greset="git reset"
 alias gstash="git stash"
 alias gst="git status"
+alias gcp="git cherry-pick"
 
 # Docker
 alias dcon='docker container'
