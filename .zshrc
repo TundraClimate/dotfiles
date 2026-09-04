@@ -65,8 +65,9 @@ precmd_functions+=( precmd_vcs_info )
 # Zsh variable
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 PROMPT='
- %F{171}fn%f %F{38}prompt%f%F{252}(%f$([ "${vcs_info_msg_0_}" != "" ] && vcs="%F{178}${vcs_info_msg_0_}%f: %F{41}Branch%f" && echo $vcs)%F{252})%f %F{034}{ %F{171}let%f %F{159}pwd%f = %F{222}"%~"%f; %F{034}}%f 
+ %F{208}${${vcs_info_msg_0_}:+🛠️  ${vcs_info_msg_0_}}%f %F{87}🪧 %~%f
  %F{reset-color}👉 '
+RPROMPT='⏰ %F{%(?.14.9)}%D{%H:%M:%S}%f'
 HISTFILE=$HOME/.zsh-history
 HISTSIZE=100000
 SAVEHIST=1000000
@@ -210,8 +211,8 @@ calc () {
 # pnpm
 export PNPM_HOME="/home/tundra/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
 esac
 # pnpm end
 
@@ -228,3 +229,8 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
+#
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+
+# Unity CLI
+case ":${PATH}:" in *:"$HOME/.local/bin":*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
