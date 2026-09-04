@@ -65,7 +65,7 @@ precmd_functions+=( precmd_vcs_info )
 # Zsh variable
 WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 PROMPT='
- %F{208}${${vcs_info_msg_0_}:+🛠️  ${vcs_info_msg_0_}}%f %F{87}🪧 %~%f
+ %F{208}${${vcs_info_msg_0_}:+📦 ${vcs_info_msg_0_}}%f %F{87}🪧 %~%f
  %F{reset-color}👉 '
 RPROMPT='⏰ %F{%(?.14.9)}%D{%H:%M:%S}%f'
 HISTFILE=$HOME/.zsh-history
