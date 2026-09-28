@@ -29,7 +29,9 @@ m("v", "<c-k>", "<c-b>")
 m("n", "<c-s>", "<cmd>w<cr>")
 m("n", "<tab>", "<c-w><c-w>")
 
-m("n", "<up>", function() vim.api.nvim_buf_delete(0, { force = true }) end)
+m("n", "<up>", function()
+    vim.api.nvim_buf_delete(0, { force = true })
+end)
 m("n", "<left>", "<cmd>bprevious<cr>")
 m("n", "<right>", "<cmd>bnext<cr>")
 
@@ -60,3 +62,25 @@ m("n", "<leader>gt", function()
         require("notify")("Buffer no changes")
     end
 end, {})
+
+m("n", "<leader>gd", function()
+    if has_git_changes() then
+        local current_win = vim.api.nvim_get_current_win()
+        local wins_before = vim.api.nvim_list_wins()
+
+        require("gitsigns").diffthis()
+
+        vim.defer_fn(function()
+            local wins_after = vim.api.nvim_list_wins()
+
+            for _, win in ipairs(wins_after) do
+                if not vim.tbl_contains(wins_before, win) and win ~= current_win then
+                    vim.api.nvim_set_current_win(win)
+                    break
+                end
+            end
+        end, 100)
+    else
+        require("notify")("Buffer no changes")
+    end
+end)
