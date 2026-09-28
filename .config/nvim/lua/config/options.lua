@@ -23,7 +23,6 @@ vim.opt.softtabstop = 4
 vim.opt.wrap = false
 vim.opt.helplang = "ja"
 vim.opt.updatetime = 300
-vim.opt.showtabline = 2
 vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"

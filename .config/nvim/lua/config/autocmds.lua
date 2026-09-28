@@ -10,3 +10,10 @@ vim.api.nvim_create_autocmd("BufReadPost", {
         end
     end,
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+    group = "my_autocmd",
+    callback = function()
+        vim.cmd("filetype detect")
+    end,
+})
