@@ -29,6 +29,6 @@ m("v", "<c-k>", "<c-b>")
 m("n", "<c-s>", "<cmd>w<cr>")
 m("n", "<tab>", "<c-w><c-w>")
 
-m("n", "<up>", "<cmd>q!<cr>")
+m("n", "<up>", function() vim.api.nvim_buf_delete(0, { force = true }) end)
 m("n", "<left>", "<cmd>bprevious<cr>")
 m("n", "<right>", "<cmd>bnext<cr>")
