@@ -5,7 +5,6 @@ return {
     config = function(opts)
         require("nvim-autopairs").setup(opts)
 
-        -- TODO
-        -- require("cmp").event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
+        require("cmp").event:on("confirm_done", require("nvim-autopairs.completion.cmp").on_confirm_done())
     end,
 }
