@@ -138,4 +138,26 @@ return {
             }),
         }
     end,
+
+    config = function(_, opts)
+        local lsp_source = require("cmp_nvim_lsp.source")
+
+        local original_execute = lsp_source.execute
+
+        lsp_source.execute = function(self, completion_item, callback)
+            if
+                self.client.name == "roslyn_ls"
+                and completion_item.command
+                and completion_item.command.command == "roslyn.client.completionComplexEdit"
+            then
+                self.client:exec_cmd(completion_item.command)
+                callback()
+                return
+            end
+
+            original_execute(self, completion_item, callback)
+        end
+
+        require("cmp").setup(opts)
+    end,
 }
