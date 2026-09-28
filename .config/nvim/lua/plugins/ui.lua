@@ -19,6 +19,11 @@ return {
         },
     },
     {
+        "j-hui/fidget.nvim",
+        event = "LspAttach",
+        opts = {},
+    },
+    {
         "stevearc/dressing.nvim",
         event = "BufRead",
         opts = {},
