@@ -31,3 +31,5 @@ vim.opt.swapfile = false
 vim.opt.pumblend = 7
 vim.opt.cursorcolumn = true
 vim.opt.list = true
+
+vim.notify = require("notify")
