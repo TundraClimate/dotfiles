@@ -32,3 +32,31 @@ m("n", "<tab>", "<c-w><c-w>")
 m("n", "<up>", function() vim.api.nvim_buf_delete(0, { force = true }) end)
 m("n", "<left>", "<cmd>bprevious<cr>")
 m("n", "<right>", "<cmd>bnext<cr>")
+
+-- telescope
+local telescope = require("telescope.builtin")
+
+m("n", "<leader>ff", telescope.find_files, {})
+m("n", "<leader>fg", telescope.live_grep, {})
+m("n", "<leader>fc", telescope.current_buffer_fuzzy_find, {})
+m("n", "<leader>fr", telescope.lsp_references, {})
+m("n", "<leader>gc", telescope.git_commits, {})
+
+local function has_git_changes()
+    local gitsigns = require("gitsigns")
+
+    local hunks = gitsigns.get_hunks()
+    if hunks and #hunks > 0 then
+        return true
+    else
+        return false
+    end
+end
+
+m("n", "<leader>gt", function()
+    if has_git_changes() then
+        telescope.git_status()
+    else
+        require("notify")("Buffer no changes")
+    end
+end, {})
