@@ -265,9 +265,9 @@ return {
 
     root_dir = function(bufnr, on_dir)
         local root = vim.fs.root(bufnr, {
-            "*.sln",
-            "*.slnx",
-            "*.csproj",
+            function(name)
+                return name:match("%.sln$") ~= nil or name:match("%.slnx$") ~= nil or name:match("%.csproj$") ~= nil
+            end,
             ".git",
         })
 
