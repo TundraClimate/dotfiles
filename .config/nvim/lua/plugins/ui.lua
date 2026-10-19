@@ -97,6 +97,7 @@ return {
     },
     {
         "petertriho/nvim-scrollbar",
+        branch = "v1",
         event = "BufRead",
         opts = {
             excluded_filetypes = {
