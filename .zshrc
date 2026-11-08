@@ -110,7 +110,7 @@ alias dim='docker image'
 # Other
 alias .token="cat $HOME/.token | clip"
 alias ...='../..'
-alias clip='xsel --clipboard'
+alias clip='wl-copy --type text/uri-list'
 alias f="touch"
 alias fd="fd -Hi"
 alias grep="rg"
@@ -122,7 +122,7 @@ alias vi='nvim'
 aliases[=]="noglob calc"
 
 # Global
-alias -g C="| xsel --clipboard"
+alias -g C="| wl-copy --type text/uri-list"
 alias -g G="| rg"
 alias -g L="| less"
 
@@ -198,7 +198,7 @@ thumbnail () {
 }
 
 fclip () {
-    echo -e "file://$(realpath $1)\n" | xclip -selection clipboard -t text/uri-list
+    echo -e "file://$(realpath $1)\n" | wl-copy --type 'text/uri-list'
     echo "$1 copied👍"
 }
 
