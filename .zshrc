@@ -206,6 +206,10 @@ calc () {
     echo "$*" | bc
 }
 
+mco () {
+    ffmpeg -i $1 -fps_mode vfr -ss $2 -to $3 output.mp4
+}
+
 # my cmd end
 
 # pnpm
