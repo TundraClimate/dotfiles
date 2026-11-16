@@ -25,6 +25,8 @@ m("n", "<c-k>", "<c-b>")
 m("v", "<c-j>", "<c-f>")
 m("v", "<c-k>", "<c-b>")
 
+m("n", "<C-e><C-e>", "f{a<enter><esc>ko")
+
 -- buffer
 m("n", "<c-s>", "<cmd>w<cr>")
 m("n", "<tab>", "<c-w><c-w>")
